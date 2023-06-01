@@ -6,9 +6,12 @@ const config: UserConfig = {
   plugins: [
     react(),
     ssr({
-      prerender: false,
+      prerender: true,
     }),
   ],
+  ssr: {
+    noExternal: ['react-countdown-circle-timer']
+  }
 };
 
 export default config;
